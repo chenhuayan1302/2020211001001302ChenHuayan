@@ -8,4 +8,13 @@
     <artifactId>ChenHuayan2020211001001302</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
