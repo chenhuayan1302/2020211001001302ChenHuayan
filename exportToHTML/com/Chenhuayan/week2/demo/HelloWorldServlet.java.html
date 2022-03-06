@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>HelloWorldServlet.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+HelloWorldServlet.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.Chenhuayan.week2.demo</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">javax.servlet.http.HttpServlet</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">javax.servlet.http.HttpServletRequest</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">javax.servlet.http.HttpServletResponse</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.io.IOException</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.io.PrintWriter</span><span class="s0">;</span>
+
+<span class="s2">//now its just a java class</span>
+<span class="s2">//extend HttpServlet</span>
+<span class="s0">public class </span><span class="s1">HelloWorldServlet </span><span class="s0">extends </span><span class="s1">HttpServlet {</span>
+    <span class="s0">public void </span><span class="s1">doGet(HttpServletRequest request</span><span class="s0">, </span><span class="s1">HttpServletResponse response) </span><span class="s0">throws </span><span class="s1">IOException {</span>
+        <span class="s2">//when client request method is GET - here - inside doGet()</span>
+        <span class="s0">final </span><span class="s1">PrintWriter writer = response.getWriter()</span><span class="s0">;</span>
+        <span class="s1">writer.println(</span><span class="s3">&quot;Hello Client!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">doPost(HttpServletRequest request</span><span class="s0">, </span><span class="s1">HttpServletResponse response){</span>
+        <span class="s2">//when client request method is GET - here - inside doGet()</span>
+
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
