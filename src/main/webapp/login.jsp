@@ -7,6 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="header.jsp"%>
+<h1>Login</h1>
+<%
+    if (request.getAttribute("message")!=null){
+        out.println(request.getAttribute("message"));
+    }
+%>
 <div class="container">
     <div class="login-wrapper">
         <div class="header">Login</div>

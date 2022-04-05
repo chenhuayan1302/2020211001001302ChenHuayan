@@ -12,6 +12,7 @@
         <servlet-name>chen.servlet</servlet-name>
         <url-pattern>/hello</url-pattern><!--url must start with /-->
     </servlet-mapping>
+    
 
     <!-- x=5, a=x, so we can say a=5-->
   <!--  <servlet>
@@ -71,4 +72,23 @@
         <servlet-name>JDBCDemoServlet</servlet-name>
         <url-pattern>/jdbc</url-pattern>
     </servlet-mapping>-->
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:sqlserver://localhost:1433;DatabaseName =userdb;encrypt=false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>sa</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>18370015206</param-value>
+    </context-param>
+    <listener>
+        <listener-class>com.Chenhuayan.week6.demo.JDBCServletContextListener</listener-class>
+    </listener>
 </web-app>

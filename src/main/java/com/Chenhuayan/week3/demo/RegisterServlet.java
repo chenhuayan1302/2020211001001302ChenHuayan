@@ -22,7 +22,7 @@ public class RegisterServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        ServletConfig config = getServletConfig();
+        /*ServletConfig config = getServletConfig();
         String url = config.getInitParameter("url");
         String driver = config.getInitParameter("driver");
         String username = config.getInitParameter("username");
@@ -35,7 +35,9 @@ public class RegisterServlet extends HttpServlet {
             e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
-        }
+        }*/
+
+        con=(Connection)getServletContext().getAttribute("con");//name of attibute
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -66,25 +68,30 @@ public class RegisterServlet extends HttpServlet {
             ps.setString(4,gender);
             ps.setString(5,Birthdays);
             ps.executeUpdate();
-            ps = con.prepareStatement(sql2);
-            ps.executeQuery();
-            rs=ps.executeQuery();
-            writer.println("<table border=1> <tr> <th>username</th> <th>password</th> <th>email</th>" +
-                    "<th>gender</th> <th>Birthdays</th> </tr>" );
-            while (rs.next()){
-                writer.println(" <th>"+rs.getString("username")+"</th> ");
+            response.sendRedirect("login.jsp");
+            //ps = con.prepareStatement(sql2);
+            //ps.executeQuery();
+            //rs=ps.executeQuery();
+            //writer.println("<table border=1> <tr> <th>username</th> <th>password</th> <th>email</th>" +
+             //       "<th>gender</th> <th>Birthdays</th> </tr>" );
+            //while (rs.next()){
+               /* writer.println(" <th>"+rs.getString("username")+"</th> ");
                 writer.println(" <th>"+rs.getString("password")+"</th> ");
                 writer.println(" <th>"+rs.getString("email")+"</th> ");
                 writer.println(" <th>"+rs.getString("gender")+"</th> ");
-                writer.println(" <th>"+rs.getString("Birthdays")+"</th></tr>");
-            }
-            writer.println("</table>");
+                writer.println(" <th>"+rs.getString("Birthdays")+"</th></tr>");*/
+            //}
+           // writer.println("</table>");
         } catch (SQLException e) {
             e.printStackTrace();
+            request.setAttribute("fail","register fail!");
+            request.getRequestDispatcher("register.jsp").forward(request,response);
         }
         finally {
             try {
-                rs.close();
+                if(rs!=null){rs.close();}
+
+
             } catch (SQLException e) {
                 e.printStackTrace();
             }
