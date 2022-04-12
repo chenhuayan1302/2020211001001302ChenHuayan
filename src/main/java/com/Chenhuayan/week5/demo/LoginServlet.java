@@ -1,5 +1,8 @@
 package com.Chenhuayan.week5.demo;
 
+import com.Chenhuayan.dao.UserDao;
+import com.Chenhuayan.model.User;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -50,7 +53,23 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        String sql = "select * from usertable where username = ? and password=?;";
+        UserDao UserDao=new UserDao();
+        try {
+             User user=UserDao.findByUsernamePassword(con,username,password);
+             if(user!=null){
+                 request.setAttribute("user",user);
+                 request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request,response);
+             }else{
+                 request.setAttribute("message","Username or Password ERROR!");
+                 request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
+
+             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        /*String sql = "select * from usertable where username = ? and password=?;";
         try {
             preparedStatement = con.prepareStatement(sql);
             preparedStatement.setString(1,username);
@@ -88,11 +107,14 @@ public class LoginServlet extends HttpServlet {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-        }
+
+
+        }*/
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
 
     }
 
