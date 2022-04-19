@@ -8,9 +8,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
@@ -56,14 +54,36 @@ public class LoginServlet extends HttpServlet {
         UserDao UserDao=new UserDao();
         try {
              User user=UserDao.findByUsernamePassword(con,username,password);
-             if(user!=null){
-                 request.setAttribute("user",user);
-                 request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request,response);
-             }else{
-                 request.setAttribute("message","Username or Password ERROR!");
-                 request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
-
-             }
+            if (user != null) {
+                //use cookie for session
+                /*Cookie c = new Cookie("sessionId",""+users.getId());
+                c.setMaxAge(10*60);
+                response.addCookie(c);*/
+                //add code for remember me
+                String rememberMe = request.getParameter("rememberMe");
+                if (rememberMe!=null && rememberMe.equals("1")) {
+                    Cookie usernameCookie = new Cookie("cUsername",user.getUsername());
+                    Cookie passwordCookie = new Cookie("cPassword",user.getPassword());
+                    Cookie rememberMeCookie = new Cookie("cRememberMe",rememberMe);
+                    usernameCookie.setMaxAge(5);//only for test --- otherwise set 60*60*24*15
+                    passwordCookie.setMaxAge(5);
+                    rememberMeCookie.setMaxAge(5);
+                    response.addCookie(usernameCookie);
+                    response.addCookie(passwordCookie);
+                    response.addCookie(rememberMeCookie);
+                }
+                //use httpSession for session
+                HttpSession session = request.getSession();//create session if session not exist -- otherwise return existing session
+                System.out.println("sessionId --->"+session.getId());//check
+                session.setMaxInactiveInterval(10);
+                //change request(one page) to session -- can get session attribute in many jsp
+                session.setAttribute("user",user);
+                //request.setAttribute("user", users);
+                request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request,response);
+            } else {
+                request.setAttribute("message","Username or Password Error!");
+                request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
