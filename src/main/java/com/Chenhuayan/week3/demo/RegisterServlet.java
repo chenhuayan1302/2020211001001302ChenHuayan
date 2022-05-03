@@ -68,7 +68,7 @@ public class RegisterServlet extends HttpServlet {
             ps.setString(4,gender);
             ps.setString(5,Birthdays);
             ps.executeUpdate();
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("login");
             //ps = con.prepareStatement(sql2);
             //ps.executeQuery();
             //rs=ps.executeQuery();
@@ -107,7 +107,7 @@ public class RegisterServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        request.getRequestDispatcher("WEB-INF/views/register.jsp").forward(request,response);
     }
 
     @Override

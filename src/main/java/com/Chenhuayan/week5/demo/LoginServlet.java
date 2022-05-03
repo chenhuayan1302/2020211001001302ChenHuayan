@@ -50,7 +50,6 @@ public class LoginServlet extends HttpServlet {
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-
         UserDao UserDao=new UserDao();
         try {
              User user=UserDao.findByUsernamePassword(con,username,password);
