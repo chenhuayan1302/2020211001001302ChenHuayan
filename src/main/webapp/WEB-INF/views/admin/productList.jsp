@@ -44,7 +44,7 @@
 					
 						<tr>
 							<td class="cart_product">
-								<a href=""><img src="" 
+								<a href=""><img src=""
 								style="border: 1px solid #F7F7F0; height: 100px;width: 80px;"/></a>
 							</td>
 							<td class="cart_description">

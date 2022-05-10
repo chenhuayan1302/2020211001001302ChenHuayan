@@ -1,7 +1,10 @@
+com\Chenhuayan\controller\AddProductServlet.class
 com\Chenhuayan\controller\UpdateServlet.class
 com\Chenhuayan\filter\FrontEndAuthenticationFilter.class
+com\Chenhuayan\model\Product.class
 com\Chenhuayan\week2\demo\HelloWorldServlet.class
 com\Chenhuayan\week5\demo\LoginServlet.class
+com\Chenhuayan\controller\ProductListServlet.class
 com\Chenhuayan\week3\demo\RegisterServlet.class
 com\Chenhuayan\controller\AdminHomeServlet.class
 com\Chenhuayan\week4\demo\ConfigDemoServlet.class
@@ -10,4 +13,7 @@ com\Chenhuayan\week6\demo\SearchServlet.class
 com\Chenhuayan\controller\logoutServlet.class
 com\Chenhuayan\filter\AdminAuthenticationFilter.class
 com\Chenhuayan\week6\demo\JDBCServletContextListener.class
+com\Chenhuayan\dao\ProductDao.class
+com\Chenhuayan\model\Category.class
 com\Chenhuayan\dao\UserDao.class
+com\Chenhuayan\dao\IProductDao.class
