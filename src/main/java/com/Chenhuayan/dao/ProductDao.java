@@ -31,7 +31,7 @@ public class ProductDao implements  IProductDao{
     }//end save
 
     @Override
-    public int delete(Integer productId, Connection con) {
+    public int delete(Integer productID, Connection con) {
         return 0;
     }
 
@@ -41,10 +41,10 @@ public class ProductDao implements  IProductDao{
     }
 
     @Override
-    public Product findById(Integer productId, Connection con)throws SQLException {
+    public Product findById(Integer productID, Connection con)throws SQLException {
         String queryString = "select * from product where productID = ?";
         PreparedStatement pt = con.prepareStatement(queryString);
-        pt.setInt(1, productId);
+        pt.setInt(1, productID);
         ResultSet rs = pt.executeQuery();
         Product product = null;
         if (rs.next()) {
@@ -58,12 +58,12 @@ public class ProductDao implements  IProductDao{
         return product;
     }
     @Override
-    public List<Product> findByCategoryId(int categoryId, Connection con) {
+    public List<Product> findByCategoryId(int categoryID, Connection con) {
         List<Product> list = new ArrayList<Product>();
         try {
             String sql = "select * from product where categoryID = ?";
             PreparedStatement pt = con.prepareStatement(sql);
-            pt.setInt(1, categoryId);
+            pt.setInt(1, categoryID);
             ResultSet rs = pt.executeQuery();
             while (rs.next()){
                 Product product = new Product();
@@ -112,14 +112,14 @@ public class ProductDao implements  IProductDao{
     }
 
     @Override
-    public List<Product> getPicture(Integer productId, Connection con) throws SQLException {
+    public List<Product> getPicture(Integer productID, Connection con) throws SQLException {
         return null;
     }
-    public byte[] getPictureById(Integer productId,Connection con) throws SQLException {
+    public byte[] getPictureById(Integer productID,Connection con) throws SQLException {
         byte[] imgByte=null;
-        String sql="select picture from Product where ProductId=?";
+        String sql="select picture from product where productID=?";
         PreparedStatement pt=con.prepareStatement(sql);
-        pt.setInt(1,productId);
+        pt.setInt(1,productID);
         ResultSet rs=pt.executeQuery();
         while(rs.next()){
             Blob blob=rs.getBlob("picture");

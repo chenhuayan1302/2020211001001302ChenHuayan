@@ -6,11 +6,14 @@ com\Chenhuayan\week4\demo\ConfigDemoServlet.class
 com\Chenhuayan\week6\demo\SearchServlet.class
 com\Chenhuayan\model\Category.class
 com\Chenhuayan\dao\IProductDao.class
+com\Chenhuayan\model\Item.class
 com\Chenhuayan\controller\UpdateServlet.class
 com\Chenhuayan\filter\FrontEndAuthenticationFilter.class
 com\Chenhuayan\week2\demo\HelloWorldServlet.class
 com\Chenhuayan\controller\ProductListServlet.class
 com\Chenhuayan\week3\demo\RegisterServlet.class
+com\Chenhuayan\controller\UserListServlet.class
+com\Chenhuayan\controller\CartServlet.class
 com\Chenhuayan\week6\demo\RedirectServlet.class
 com\Chenhuayan\controller\logoutServlet.class
 com\Chenhuayan\filter\AdminAuthenticationFilter.class

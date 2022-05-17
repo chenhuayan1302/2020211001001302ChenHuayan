@@ -14,7 +14,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "ProductDetailsServlet",value = "/ProductDetails")
+@WebServlet("/productDetails")
 public class ProductDetailsServlet extends HttpServlet {
     private Connection con=null;
     public void init() throws ServletException{

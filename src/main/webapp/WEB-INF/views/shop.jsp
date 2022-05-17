@@ -24,7 +24,7 @@
 							<c:forEach var="c" items="${categoryList}">
 								<div class="panel panel-default">
 									<div class="panel-heading">
-										<h4 class="panel-title"><a href="<%=basePath%>shop?categoryId=${c.categoryID}">${c.categoryName}</a></h4>
+										<h4 class="panel-title"><a href="<%=basePath%>shop?categoryID=${c.categoryID}">${c.categoryName}</a></h4>
 									</div>
 								</div>
 							</c:forEach>
@@ -62,7 +62,7 @@
 											<img src="<%=basePath%>getImg?id=${p.productID}" alt="" style="height: 150px; width: 150px"/>
 											<h2>${p.price}</h2>
 											<p>${p.productName}</p>
-											<a href="<%=basePath %>cart?productId=${p.productID}&action=add" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											<a href="<%=basePath %>cart?productID=${p.productID}&action=add" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 
 									</div>

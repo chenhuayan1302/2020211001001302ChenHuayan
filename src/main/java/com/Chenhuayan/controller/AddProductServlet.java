@@ -43,7 +43,7 @@ public class AddProductServlet extends HttpServlet {
             throws ServletException, IOException {
         String productName = request.getParameter("productName");
         double price = request.getParameter("price")!=null ? Double.parseDouble(request.getParameter("price")):0.0;
-        int categoryID = request.getParameter("categoryId")!=null ? Integer.parseInt(request.getParameter("categoryId")):0;
+        int categoryID = request.getParameter("categoryID")!=null ? Integer.parseInt(request.getParameter("categoryID")):0;
         String productDescription = request.getParameter("productDescription");
         InputStream inputStream = null;
         Part filePart = (Part) request.getPart("picture");

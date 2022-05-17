@@ -1,5 +1,4 @@
-
-	<%@include file="header.jsp" %>
+<%@include file="header.jsp" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 	<section>
 		<div class="container">
@@ -13,7 +12,7 @@
 							<c:forEach var="c" items="${categoryList}">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="<%=basePath %>shop?categoryId=${c.categoryID}">${c.categoryName}</a></h4>
+									<h4 class="panel-title"><a href="<%=basePath %>shop?categoryID=${c.categoryID}">${c.categoryName}</a></h4>
 								</div>
 							</div>
 							</c:forEach>
@@ -87,7 +86,7 @@
 									<form action="<%=basePath %>cart">
 									<!-- <label>Quantity:</label>
 									<input type="text"  name="quantity"/> -->
-									<input type="hidden" value="${p.productId}" name="productId"/>
+									<input type="hidden" value="${p.productID}" name="productId"/>
 									<input type="hidden" value="add" name="action"/>
 									<div><br/>
 									<button type="submit" class="btn btn-fefault cart">

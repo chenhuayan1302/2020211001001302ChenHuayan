@@ -28,10 +28,10 @@ public class ShopServlet extends HttpServlet {
         ProductDao productDao = new ProductDao();
         List<Product> productList = null;
         try {
-            if (request.getParameter("categoryId")== null) {
+            if (request.getParameter("categoryID")== null) {
                 productList = productDao.findAll(con);
             } else {
-                int categoryID = Integer.parseInt(request.getParameter("categoryId"));
+                int categoryID = Integer.parseInt(request.getParameter("categoryID"));
                 productList = productDao.findByCategoryId(categoryID,con);
             }
         } catch (SQLException e) {
