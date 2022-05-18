@@ -1,4 +1,5 @@
 com\Chenhuayan\controller\AddProductServlet.class
+LifeCycleServlet.class
 com\Chenhuayan\model\Product.class
 com\Chenhuayan\week5\demo\LoginServlet.class
 com\Chenhuayan\controller\AdminHomeServlet.class
@@ -9,6 +10,7 @@ com\Chenhuayan\dao\IProductDao.class
 com\Chenhuayan\model\Item.class
 com\Chenhuayan\controller\UpdateServlet.class
 com\Chenhuayan\filter\FrontEndAuthenticationFilter.class
+MyDearServlet.class
 com\Chenhuayan\week2\demo\HelloWorldServlet.class
 com\Chenhuayan\controller\ProductListServlet.class
 com\Chenhuayan\week3\demo\RegisterServlet.class
