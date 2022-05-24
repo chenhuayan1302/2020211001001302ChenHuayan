@@ -170,4 +170,22 @@ public class UserDao implements IUserDao {
         }
         return (List<User>) user;
     }
+
+    public User findById(Connection con, int id) throws SQLException {
+        String sql = "select * from usertable where id = ?";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setInt(1,id);
+        ResultSet rs = ps.executeQuery();
+        User user = null;
+        if (rs.next()) {
+            user= new User();
+            user.setId(rs.getInt("id"));
+            user.setUsername(rs.getString("username"));
+            user.setPassword(rs.getString("password"));
+            user.setEmail(rs.getString("email"));
+            user.setGender(rs.getString("gender"));
+            user.setBirthdays(rs.getDate("Birthdays"));
+        }
+        return user;
+    }
 }

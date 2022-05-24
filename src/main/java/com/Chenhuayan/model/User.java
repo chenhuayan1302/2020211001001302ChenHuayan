@@ -2,6 +2,7 @@ package com.Chenhuayan.model;
 
 import java.util.Date;
 public class User {
+    private int id;
     private String username;
     private String password;
     private String email;
@@ -12,6 +13,7 @@ public class User {
     }
 
     public User(int id, String username, String password, String email, String gender, Date Birthdays) {
+        this.id=id;
         this.username = username;
         this.password = password;
         this.email = email;
@@ -62,5 +64,13 @@ public class User {
                 ", gender='" + gender + '\'' +
                 ", birth=" + Birthdays +
                 '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

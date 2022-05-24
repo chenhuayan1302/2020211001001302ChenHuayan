@@ -36,23 +36,22 @@ public class UpdateServlet extends HttpServlet {
         user.setGender(gender);
         user.setBirthdays(Date.valueOf(Birthdays));
         UserDao userDao = new UserDao();
-        int update = 0;
         try {
-            update = userDao.updateUser(con,user);
+            int update = userDao.updateUser(con,user);
+            if (update == 0) {
+                //HttpSession session = request.getSession();//create session if session not exist -- otherwise return existing session
+                //session.setMaxInactiveInterval(10);
+
+                //change request(one page) to session -- can get session attribute in many jsp
+                //session.setAttribute("user",users);
+                request.getRequestDispatcher("accountDetails").forward(request,response);
+            }
+            else {
+                request.setAttribute("updateFail","updateUser fail!");
+                request.getRequestDispatcher("WEB-INF/views/updateUser.jsp").forward(request,response);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-        if (update == 0) {
-            //HttpSession session = request.getSession();//create session if session not exist -- otherwise return existing session
-            //session.setMaxInactiveInterval(10);
-
-            //change request(one page) to session -- can get session attribute in many jsp
-            //session.setAttribute("user",users);
-            request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request,response);
-        }
-        else {
-            request.setAttribute("updateFail","updateUser fail!");
-            request.getRequestDispatcher("WEB-INF/views/updateUser.jsp").forward(request,response);
         }
 
     }
