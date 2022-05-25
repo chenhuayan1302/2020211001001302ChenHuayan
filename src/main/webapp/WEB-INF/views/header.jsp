@@ -102,7 +102,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								
 								<li><a href="<%=basePath%>cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="<%=basePath%>register"><i class="fa fa-crosshairs"></i> Register</a></li>
-								<li><a href="<%=basePath%>login"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="<%=basePath%>login"><i class="fa fa-lock"></i> lab2.Login</a></li>
 								<li><a href="<%=basePath%>logout"><i class="fa fa-unlock"></i> Logout</a></li>
 							</ul>
 						</div>
@@ -133,7 +133,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<li><a href="<%=basePath%>myCart">Cart</a></li> 
 										<li><a href="<%=basePath%>order">Order</a></li>
 										
-										<%-- <li><a href="<%=basePath%>login">Login</a></li>  --%>
+										<%-- <li><a href="<%=basePath%>login">lab2.Login</a></li>  --%>
                                     </ul>
                                 </li> 
 								

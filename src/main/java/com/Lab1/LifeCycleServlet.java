@@ -1,11 +1,13 @@
+package com.Lab1;
+
 import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@javax.servlet.annotation.WebServlet(name = "LifeCycleServlet" )
+@javax.servlet.annotation.WebServlet(name = "com.Lab1.LifeCycleServlet" )
 public class LifeCycleServlet extends javax.servlet.http.HttpServlet {
     public LifeCycleServlet(){
-        System.out.println("I Am from default constructor --> LifeCycleServlet() ");
+        System.out.println("I Am from default constructor --> com.Lab1.LifeCycleServlet() ");
     }
     public void init(){
         System.out.println("init");

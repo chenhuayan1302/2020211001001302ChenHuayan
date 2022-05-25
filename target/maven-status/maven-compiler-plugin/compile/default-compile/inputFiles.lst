@@ -6,12 +6,15 @@ D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controlle
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controller\AccountDetailsServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controller\CartServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\filter\AdminAuthenticationFilter.java
+D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Lab1\MyDearServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\model\Product.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\model\Payment.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controller\ProductListServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controller\ShopServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controller\ProductDetailsServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\dao\IOrderDao.java
+D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Lab2\ChenhuayanFilter.java
+D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Lab1\LifeCycleServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\dao\ProductDao.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\week6\demo\RedirectServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\model\Order.java
@@ -20,9 +23,10 @@ D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controlle
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controller\HomeServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\dao\UserDao.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controller\AddProductServlet.java
+D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Lab2\Login.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\week6\demo\SearchServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\week2\demo\HelloWorldServlet.java
-D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\MyDearServlet.java
+D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Lab2\LoginFilter.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controller\OrderDetailsServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\week5\demo\LoginServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controller\GetImgServlet.java
@@ -34,4 +38,3 @@ D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controlle
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\dao\IProductDao.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\controller\UpdateServlet.java
 D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\com\Chenhuayan\dao\OrderDao.java
-D:\IJ webworks\2020211001001302ChenHuayan\src\main\java\LifeCycleServlet.java

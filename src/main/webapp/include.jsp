@@ -22,6 +22,6 @@
 <br/>
 <a href="include.jsp" style="font-size: 20px;margin-left: 10px">include-week5</a>
 <br/>
-<a href="login.jsp" style="font-size: 20px;margin-left: 10px">Login-week5</a>
+<a href="login.jsp" style="font-size: 20px;margin-left: 10px">lab2.Login-week5</a>
 <%@include file="footer.jsp"%>
 </html>

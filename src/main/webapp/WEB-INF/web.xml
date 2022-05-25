@@ -91,12 +91,20 @@
     <listener>
         <listener-class>com.Chenhuayan.week6.demo.JDBCServletContextListener</listener-class>
     </listener>
+    <filter>
+        <filter-name>ChenhuayanFilter</filter-name>
+        <filter-class>com.Lab2.ChenhuayanFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ChenhuayanFilter</filter-name>
+        <url-pattern>/Lab2/welcomne.jsp</url-pattern>
+    </filter-mapping>
     <welcome-file-list>
         <welcome-file>home</welcome-file>
     </welcome-file-list>
     <servlet>
         <servlet-name>LifeCycleServlet</servlet-name>
-        <servlet-class>LifeCycleServlet</servlet-class>
+        <servlet-class>com.Lab1.LifeCycleServlet</servlet-class>
 
     </servlet>
     <servlet-mapping>

@@ -6,7 +6,7 @@
 			<div class="row">
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
-					<h2>Login to your account</h2>	<%
+					<h2>lab2.Login to your account</h2>	<%
     if(!(request.getAttribute("message")==null)){
     out.println("<h2>"+request.getAttribute("message")+"</h2>");
 }%>
@@ -38,7 +38,7 @@
     <span>
 		<input type="checkbox" class="checkbox" name="remember" value="1" <%="1".equals(rememberMe)? "checked":""%>/> Keep me signed in
    </span>
-    <button type="submit" class="btn btn-default">Login</button>
+    <button type="submit" class="btn btn-default">lab2.Login</button>
 </form>	
 					</div><!--/login form-->
 				</div>

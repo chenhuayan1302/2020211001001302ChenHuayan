@@ -96,7 +96,7 @@ public class LoginServlet extends HttpServlet {
             resultSet = preparedStatement.executeQuery();
             PrintWriter out = response.getWriter();
             if (resultSet.next()){
-               //out.println("Login Success!!!Welcome!");
+               //out.println("lab2.Login Success!!!Welcome!");
                 request.setAttribute("username",resultSet.getString("username"));
                 request.setAttribute("password",resultSet.getString("password"));
                 request.setAttribute("email",resultSet.getString("email"));
@@ -106,7 +106,7 @@ public class LoginServlet extends HttpServlet {
                 return;
             }
             else{
-                //out.println("Login Failed!");
+                //out.println("lab2.Login Failed!");
                 request.setAttribute("message","Username or Password Error!!!");
                 request.getRequestDispatcher("login.jsp").forward(request,response);
             }

@@ -1,3 +1,5 @@
+package com.Lab1;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -6,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "MyDearServlet" ,urlPatterns = {"/mydear"})
+@WebServlet(name = "com.lab1.MyDearServlet" ,urlPatterns = {"/mydear"})
 public class MyDearServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String name=request.getParameter("name");

@@ -82,7 +82,7 @@
                             border-top-width:0px;
                             border-color:black;" align="center">
      <a style="color:white;" href="include.jsp">Home</a>
-   - <a style="color:white;" href="login.jsp">Login</a>
+   - <a style="color:white;" href="login.jsp">lab2.Login</a>
    - <a style="color:white;" href="productList">Product</a>
    - <a style="color:white;" href="#">FAQ</a>
    - <a style="color:white;" href="#">About</a>
